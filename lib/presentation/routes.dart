@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_oceantech/common/contant.dart';
+import 'package:flutter_oceantech/presentation/todolist/bloc/todolist_cubit.dart';
+import 'package:flutter_oceantech/presentation/todolist/view/todolist_view.dart';
 
 import 'login/bloc/login_cubit.dart';
 import 'login/view/login_view.dart';
-import 'main/bloc/main_cubit.dart';
-import 'main/view/main_view.dart';
 import 'register/bloc/register_cubit.dart';
 import 'register/view/register_view.dart';
 
@@ -13,7 +12,7 @@ class RouteList {
   static const String registerScreen = '/register';
   static const String loginScreen = '/login';
 
-  static const String main = '/main';
+  static const String todolist = '/todolist';
 }
 
 class Routes {
@@ -35,15 +34,11 @@ class Routes {
             child: const LoginScreen(),
           ),
         );
-      case RouteList.main:
+      case RouteList.todolist:
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
-            create: (context) => TabMangerCubit(),
-            child: Container(
-              child: Text(
-                'main screen\n${currentUser?.email}',
-              ),
-            ),
+            create: (context) => TodoListCubit(),
+            child: const TodoListScreen(),
           ),
         );
 

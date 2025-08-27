@@ -15,7 +15,7 @@ class LoginCubit extends BaseBloc<LoginState> {
     if (result != null) {
       showSnackbar('login error');
     } else {
-      pushAndRemoveUntil(RouteList.main);
+      pushAndRemoveUntil(RouteList.todolist);
     }
   }
 }
