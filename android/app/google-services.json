@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1047849270281",
+    "project_id": "ocean-tech-be9a8",
+    "storage_bucket": "ocean-tech-be9a8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1047849270281:android:e9faea93a49946ca3dccd8",
+        "android_client_info": {
+          "package_name": "com.example.flutter_oceantech"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnJCWQa7D4x3ox43mD31xTP__GzLO_9aA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
