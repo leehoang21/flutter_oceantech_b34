@@ -24,7 +24,7 @@ class TodolistController extends GetxController with ControllerMixin {
     final result = await serviceApp.todolistService.save(
       TodolistModel(title: title, content: content),
     );
-    if (result != null) {
+    if (!isNullEmpty(result?.$2)) {
       showErrorAlert('TodoList error', () {});
     }
   }
@@ -44,9 +44,9 @@ class TodolistController extends GetxController with ControllerMixin {
         if (!isNullEmpty(event.$2)) {
           showErrorAlert('get todolist error', () {});
         } else {
-          _list
-            ..clear()
-            ..addAll(event.$1);
+          _list.clear();
+          _list.addAll(event.$1);
+          update();
         }
       },
     );

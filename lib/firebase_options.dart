@@ -50,11 +50,11 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAnJCWQa7D4x3ox43mD31xTP__GzLO_9aA',
-    appId: '1:1047849270281:android:8f0125f35c96b8833dccd8',
-    messagingSenderId: '1047849270281',
-    projectId: 'ocean-tech-be9a8',
-    storageBucket: 'ocean-tech-be9a8.firebasestorage.app',
+    apiKey: 'AIzaSyB2X8t-GU6tO74CXwuP8qQt7ZEG01fnJJ0',
+    appId: '1:998896689837:android:11a968463a090ff1011c24',
+    messagingSenderId: '998896689837',
+    projectId: 'learning-english-6441b',
+    storageBucket: 'learning-english-6441b.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
@@ -76,12 +76,12 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBzlWCp69G3qv2CSw-SUnWhSfSc_5UTT_U',
-    appId: '1:1047849270281:web:a0f5ed480c5ad47e3dccd8',
-    messagingSenderId: '1047849270281',
-    projectId: 'ocean-tech-be9a8',
-    authDomain: 'ocean-tech-be9a8.firebaseapp.com',
-    storageBucket: 'ocean-tech-be9a8.firebasestorage.app',
+    apiKey: 'AIzaSyC9QNb1gTSPUey0cKLJQD3dABjvoVJuH3M',
+    appId: '1:998896689837:web:2d2d8f6d32d36a23011c24',
+    messagingSenderId: '998896689837',
+    projectId: 'learning-english-6441b',
+    authDomain: 'learning-english-6441b.firebaseapp.com',
+    storageBucket: 'learning-english-6441b.appspot.com',
   );
 
 }

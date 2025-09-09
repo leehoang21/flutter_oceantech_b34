@@ -44,11 +44,11 @@ class UserModel {
 
   UserModel copyWith({
     String? email,
-    String? address,
+    String? uid,
   }) {
     return UserModel(
       email: email ?? this.email,
-      uid: uid,
+      uid: uid ?? this.uid,
     );
   }
 }

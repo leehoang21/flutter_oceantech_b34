@@ -1,45 +1,103 @@
 {
   "project_info": {
-    "project_number": "1047849270281",
-    "project_id": "ocean-tech-be9a8",
-    "storage_bucket": "ocean-tech-be9a8.firebasestorage.app"
+    "project_number": "998896689837",
+    "project_id": "learning-english-6441b",
+    "storage_bucket": "learning-english-6441b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1047849270281:android:e9faea93a49946ca3dccd8",
+        "mobilesdk_app_id": "1:998896689837:android:11a968463a090ff1011c24",
         "android_client_info": {
-          "package_name": "com.example.flutter_oceantech"
+          "package_name": "com.example.flutter_oceantech_b34"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "998896689837-4koja4ab5ufbhe00gbsmn0soj047vldu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyAnJCWQa7D4x3ox43mD31xTP__GzLO_9aA"
+          "current_key": "AIzaSyB2X8t-GU6tO74CXwuP8qQt7ZEG01fnJJ0"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "998896689837-4koja4ab5ufbhe00gbsmn0soj047vldu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "998896689837-6akcjdqbr8596n3op544pbd2dq2160mj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "vn.vanh.pin"
+              }
+            }
+          ]
         }
       }
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1047849270281:android:8f0125f35c96b8833dccd8",
+        "mobilesdk_app_id": "1:998896689837:android:18f44ca106a1d841011c24",
         "android_client_info": {
-          "package_name": "com.example.flutter_oceantech_b34"
+          "package_name": "vn.vanh.pin"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "998896689837-4ihunro90lu0bnus8blh8k5e1i1ag7gd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.vanh.pin",
+            "certificate_hash": "d7a48358448c586c7e9c5f97cfc7a1e90105e731"
+          }
+        },
+        {
+          "client_id": "998896689837-56rga98alqj1ap2re13i8m17o0jvbm02.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.vanh.pin",
+            "certificate_hash": "b48beb282f64afb2e8470cf4fd04bc88e2b3868f"
+          }
+        },
+        {
+          "client_id": "998896689837-khqs4eclg1jrha8dionudkvt3p1pmm09.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.vanh.pin",
+            "certificate_hash": "427a369fc08561bc2022b28cf2c3f0503c3b2fb8"
+          }
+        },
+        {
+          "client_id": "998896689837-4koja4ab5ufbhe00gbsmn0soj047vldu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyAnJCWQa7D4x3ox43mD31xTP__GzLO_9aA"
+          "current_key": "AIzaSyB2X8t-GU6tO74CXwuP8qQt7ZEG01fnJJ0"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "998896689837-4koja4ab5ufbhe00gbsmn0soj047vldu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "998896689837-6akcjdqbr8596n3op544pbd2dq2160mj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "vn.vanh.pin"
+              }
+            }
+          ]
         }
       }
     }

@@ -15,6 +15,8 @@ class AuthService {
         email: user.email,
         password: password,
       );
+      final newUser = user.copyWith(uid: config.auth.currentUser?.uid ?? '');
+      currentUser = newUser;
     } on Exception catch (e) {
       return e.toString();
     }

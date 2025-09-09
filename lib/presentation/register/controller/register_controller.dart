@@ -17,7 +17,7 @@ class RegisterController extends GetxController with ControllerMixin {
     if (result != null) {
       showErrorAlert('Register error', () {});
     } else {
-      Get.toNamed(RouteList.todolistScreen);
+      Get.offAndToNamed(RouteList.todolistScreen);
     }
   }
 }

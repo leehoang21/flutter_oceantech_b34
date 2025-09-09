@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter_oceantech_b34/common/contant.dart';
 import 'package:flutter_oceantech_b34/common/default_environment.dart';
 import 'package:flutter_oceantech_b34/common/firebase_config.dart';
 import 'package:flutter_oceantech_b34/common/utils.dart';
@@ -9,8 +10,10 @@ class TodolistService {
 
   TodolistService(this.config);
 
-  CollectionReference<Map<String, dynamic>> get _collection =>
-      config.userDoc.collection(DefaultEnvironment.todolist);
+  CollectionReference<Map<String, dynamic>> get _collection => config.userDoc
+      .collection(DefaultEnvironment.todolist)
+      .doc(currentUser!.uid)
+      .collection('items');
 
   Future<(TodolistModel?, String)?> save(TodolistModel model) async {
     try {
