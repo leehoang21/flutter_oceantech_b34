@@ -1,11 +1,10 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
+import 'package:flutter_oceantech/presentation/login/controller/login_controller.dart';
+import 'package:get/get.dart';
 import '../../routes.dart';
 import '../../widgets/text_button.dart';
 import '../../widgets/text_filed_widget.dart';
-import '../bloc/login_cubit.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -49,10 +48,10 @@ class LoginScreen extends StatelessWidget {
                 ),
                 child: TextButtonWidget(
                   onPressed: () async {
-                    await context.read<LoginCubit>().login(
-                          controller.text,
-                          controllerPassword.text,
-                        );
+                    await Get.find<LoginController>().login(
+                      controller.text,
+                      controllerPassword.text,
+                    );
                   },
                   title: "Login",
                 ),
@@ -77,8 +76,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            Navigator.of(context)
-                                .pushNamed(RouteList.registerScreen);
+                            Get.toNamed(RouteList.registerScreen);
                           },
                       ),
                     ],

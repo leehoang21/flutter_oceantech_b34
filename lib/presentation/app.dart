@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../common/contant.dart';
+import 'package:get/get.dart';
 import 'routes.dart';
 
 class App extends StatelessWidget {
@@ -16,11 +15,12 @@ class App extends StatelessWidget {
           FocusManager.instance.primaryFocus!.unfocus();
         }
       },
-      child: MaterialApp(
+      child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        navigatorKey: navigator,
+        navigatorKey: Get.key,
         initialRoute: RouteList.loginScreen,
-        onGenerateRoute: Routes.generateRoute,
+        getPages: Routes.routes,
+        defaultTransition: Transition.topLevel,
       ),
     );
   }

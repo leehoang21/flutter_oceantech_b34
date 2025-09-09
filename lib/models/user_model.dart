@@ -2,12 +2,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class UserModel {
   final String email;
-  final String address;
   final String uid;
 
   UserModel({
     required this.email,
-    required this.address,
     required this.uid,
   });
 
@@ -27,24 +25,21 @@ class UserModel {
 
   factory UserModel._fromJson(Map<String, dynamic> json) => UserModel(
         email: json["email"] ?? '',
-        address: json["address"] ?? '',
         uid: json["uid"] ?? '',
       );
 
   factory UserModel.empty() => UserModel(
         email: '',
-        address: '',
         uid: '',
       );
 
   Map<String, dynamic> toJson() => {
         "email": email,
-        "address": address,
       };
 
   @override
   String toString() {
-    return 'UserModel{email: $email,  address: $address}';
+    return 'UserModel{email: $email}';
   }
 
   UserModel copyWith({
@@ -53,7 +48,6 @@ class UserModel {
   }) {
     return UserModel(
       email: email ?? this.email,
-      address: address ?? this.address,
       uid: uid,
     );
   }

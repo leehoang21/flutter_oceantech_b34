@@ -1,21 +1,22 @@
 import 'dart:async';
 
-import 'package:equatable/equatable.dart';
-import 'package:flutter_oceantech/common/extension.dart';
-import 'package:flutter_oceantech/common/utils.dart';
-import 'package:flutter_oceantech/models/todolist_model.dart';
+import 'package:get/get.dart';
 
-import '../../../common/base_bloc.dart';
 import '../../../common/contant.dart';
+import '../../../common/controller_mixin.dart';
+import '../../../common/utils.dart';
+import '../../../models/todolist_model.dart';
 
-part 'todolist_state.dart';
+class TodolistController extends GetxController with ControllerMixin {
+  TodolistController();
 
-class TodoListCubit extends BaseBloc<TodoListState> {
-  TodoListCubit() : super(const TodoListInitial());
   StreamSubscription? _subscription;
+  final List<TodolistModel> _list = [];
+  List<TodolistModel> get list => _list;
 
   @override
   onInit() {
+    super.onInit();
     getAll();
   }
 
@@ -24,7 +25,7 @@ class TodoListCubit extends BaseBloc<TodoListState> {
       TodolistModel(title: title, content: content),
     );
     if (result != null) {
-      showSnackbar('TodoList error');
+      showErrorAlert('TodoList error', () {});
     }
   }
 
@@ -41,9 +42,11 @@ class TodoListCubit extends BaseBloc<TodoListState> {
     _subscription = serviceApp.todolistService.getAll().listen(
       (event) {
         if (!isNullEmpty(event.$2)) {
-          showSnackbar('get todolist error');
+          showErrorAlert('get todolist error', () {});
         } else {
-          emit(TodoListLoaded(event.$1));
+          _list
+            ..clear()
+            ..addAll(event.$1);
         }
       },
     );

@@ -1,11 +1,11 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_oceantech/presentation/register/controller/register_controller.dart';
+import 'package:get/get.dart';
 
 import '../../routes.dart';
 import '../../widgets/text_button.dart';
 import '../../widgets/text_filed_widget.dart';
-import '../bloc/register_cubit.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -15,7 +15,6 @@ class RegisterScreen extends StatelessWidget {
     final TextEditingController controller = TextEditingController();
 
     final TextEditingController controllerPassword = TextEditingController();
-    final TextEditingController controllerAddress = TextEditingController();
 
     return Scaffold(
       appBar: AppBar(
@@ -37,13 +36,6 @@ class RegisterScreen extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              TextFieldWidget(
-                controller: controllerAddress,
-                hintText: "address",
-              ),
-              const SizedBox(
-                height: 10,
-              ),
               SecurityTextFieldWidget(
                 controller: controllerPassword,
                 keyboardType: TextInputType.text,
@@ -55,11 +47,10 @@ class RegisterScreen extends StatelessWidget {
                 ),
                 child: TextButtonWidget(
                   onPressed: () async {
-                    await context.read<RegisterCubit>().register(
-                          controller.text,
-                          controllerPassword.text,
-                          controllerAddress.text,
-                        );
+                    await Get.find<RegisterController>().register(
+                      controller.text,
+                      controllerPassword.text,
+                    );
                   },
                   title: "Register",
                 ),
@@ -84,8 +75,7 @@ class RegisterScreen extends StatelessWidget {
                         ),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            Navigator.of(context)
-                                .pushNamed(RouteList.loginScreen);
+                            Get.toNamed(RouteList.loginScreen);
                           },
                       ),
                     ],

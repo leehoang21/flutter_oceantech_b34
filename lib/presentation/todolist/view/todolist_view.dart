@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_oceantech/models/todolist_model.dart';
-import 'package:flutter_oceantech/presentation/todolist/bloc/todolist_cubit.dart';
+import 'package:flutter_oceantech/presentation/todolist/controller/todolist_controller.dart';
 import 'package:flutter_oceantech/presentation/widgets/card_custom.dart';
+import 'package:get/get.dart';
 
 class EditDialog extends StatefulWidget {
   const EditDialog({
@@ -108,10 +108,10 @@ class TodoListItem extends StatelessWidget {
                     return EditDialog(
                       model: model,
                       onPressed: (title, content) {
-                        context.read<TodoListCubit>().edit(model.copyWith(
-                              title: title,
-                              content: content,
-                            ));
+                        Get.find<TodolistController>().edit(model.copyWith(
+                          title: title,
+                          content: content,
+                        ));
                       },
                       title: 'Edit',
                     );
@@ -123,7 +123,7 @@ class TodoListItem extends StatelessWidget {
               icon: const Icon(Icons.delete),
               color: Colors.red,
               onPressed: () {
-                context.read<TodoListCubit>().delete(model.uid);
+                Get.find<TodolistController>().delete(model.uid);
               },
             ),
           ],
@@ -143,18 +143,15 @@ class TodoListScreen extends StatelessWidget {
         title: const Text("TodoList"),
         centerTitle: true,
       ),
-      body: BlocBuilder<TodoListCubit, TodoListState>(
-        builder: (context, state) {
-          if (state is TodoListInitial) {
-            return const Center(child: CircularProgressIndicator());
-          }
+      body: GetBuilder<TodolistController>(
+        builder: (controller) {
           return Padding(
             padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
             child: ListView.builder(
-              itemCount: state.list.length,
+              itemCount: controller.list.length,
               itemBuilder: (BuildContext context, int index) {
                 return TodoListItem(
-                  model: state.list[index],
+                  model: controller.list[index],
                 );
               },
             ),
@@ -168,7 +165,7 @@ class TodoListScreen extends StatelessWidget {
             builder: (BuildContext _) {
               return EditDialog(
                 onPressed: (title, content) {
-                  context.read<TodoListCubit>().add(title, content);
+                  Get.find<TodolistController>().add(title, content);
                 },
                 title: 'Add',
               );

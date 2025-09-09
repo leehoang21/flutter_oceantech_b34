@@ -30,7 +30,6 @@ class AuthService {
       await config.auth.signInWithCredential(credential);
       final user = UserModel(
         email: email,
-        address: '',
         uid: config.auth.currentUser?.uid ?? '',
       );
       currentUser = user;
