@@ -1,4 +1,4 @@
-name: flutter_oceantech
+name: flutter_oceantech_b34
 description: "A new Flutter project."
 publish_to: 'none'
 version: 0.1.0
@@ -8,12 +8,10 @@ environment:
 
 dependencies:
   cloud_firestore: ^6.0.0
-  equatable: ^2.0.7
   firebase_auth: ^6.0.1
   firebase_core: ^4.0.0
   flutter:
     sdk: flutter
-  flutter_bloc: ^9.1.1
   get: ^4.7.2
 
 dev_dependencies:

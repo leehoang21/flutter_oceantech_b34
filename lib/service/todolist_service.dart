@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter_oceantech/common/default_environment.dart';
-import 'package:flutter_oceantech/common/firebase_config.dart';
-import 'package:flutter_oceantech/common/utils.dart';
-import 'package:flutter_oceantech/models/todolist_model.dart';
+import 'package:flutter_oceantech_b34/common/default_environment.dart';
+import 'package:flutter_oceantech_b34/common/firebase_config.dart';
+import 'package:flutter_oceantech_b34/common/utils.dart';
+import 'package:flutter_oceantech_b34/models/todolist_model.dart';
 
 class TodolistService {
   final FirebaseConfig config;

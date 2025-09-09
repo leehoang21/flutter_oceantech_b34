@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyAnJCWQa7D4x3ox43mD31xTP__GzLO_9aA',
-    appId: '1:1047849270281:android:e9faea93a49946ca3dccd8',
+    appId: '1:1047849270281:android:8f0125f35c96b8833dccd8',
     messagingSenderId: '1047849270281',
     projectId: 'ocean-tech-be9a8',
     storageBucket: 'ocean-tech-be9a8.firebasestorage.app',
@@ -77,10 +77,11 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions windows = FirebaseOptions(
     apiKey: 'AIzaSyBzlWCp69G3qv2CSw-SUnWhSfSc_5UTT_U',
-    appId: '1:1047849270281:web:7061cdf47ab1da5f3dccd8',
+    appId: '1:1047849270281:web:a0f5ed480c5ad47e3dccd8',
     messagingSenderId: '1047849270281',
     projectId: 'ocean-tech-be9a8',
     authDomain: 'ocean-tech-be9a8.firebaseapp.com',
     storageBucket: 'ocean-tech-be9a8.firebasestorage.app',
   );
+
 }

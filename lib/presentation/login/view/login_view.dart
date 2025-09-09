@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_oceantech/presentation/login/controller/login_controller.dart';
+import 'package:flutter_oceantech_b34/presentation/login/controller/login_controller.dart';
 import 'package:get/get.dart';
 import '../../routes.dart';
 import '../../widgets/text_button.dart';

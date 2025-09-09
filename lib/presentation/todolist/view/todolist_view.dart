@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_oceantech/models/todolist_model.dart';
-import 'package:flutter_oceantech/presentation/todolist/controller/todolist_controller.dart';
-import 'package:flutter_oceantech/presentation/widgets/card_custom.dart';
+import 'package:flutter_oceantech_b34/models/todolist_model.dart';
+import 'package:flutter_oceantech_b34/presentation/todolist/controller/todolist_controller.dart';
+import 'package:flutter_oceantech_b34/presentation/widgets/card_custom.dart';
 import 'package:get/get.dart';
 
 class EditDialog extends StatefulWidget {

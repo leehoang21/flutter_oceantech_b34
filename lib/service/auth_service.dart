@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_oceantech/common/firebase_config.dart';
+import 'package:flutter_oceantech_b34/common/firebase_config.dart';
 
 import '../common/contant.dart';
 import '../models/user_model.dart';
