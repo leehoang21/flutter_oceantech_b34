@@ -5,7 +5,9 @@ import '../../../common/controller_mixin.dart';
 import '../../../models/user_model.dart';
 import '../../routes.dart';
 
-class RegisterController extends GetxController with ControllerMixin {
+class RegisterController extends GetxController
+    with ControllerMixin
+    implements GetxService {
   RegisterController();
 
   Future<void> register(String email, String password) async {

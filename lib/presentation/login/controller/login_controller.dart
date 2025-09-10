@@ -4,7 +4,9 @@ import '../../../common/contant.dart';
 import '../../../common/controller_mixin.dart';
 import '../../routes.dart';
 
-class LoginController extends GetxController with ControllerMixin {
+class LoginController extends GetxController
+    with ControllerMixin
+    implements GetxService {
   LoginController();
 
   Future<void> login(String email, String password) async {
@@ -12,7 +14,7 @@ class LoginController extends GetxController with ControllerMixin {
     if (result != null) {
       showErrorAlert('login error', () {});
     } else {
-      Get.offAndToNamed(RouteList.todolistScreen);
+      Get.toNamed(RouteList.todolistScreen);
     }
   }
 }

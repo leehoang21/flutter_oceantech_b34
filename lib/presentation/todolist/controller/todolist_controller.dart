@@ -7,7 +7,9 @@ import '../../../common/controller_mixin.dart';
 import '../../../common/utils.dart';
 import '../../../models/todolist_model.dart';
 
-class TodolistController extends GetxController with ControllerMixin {
+class TodolistController extends GetxController
+    with ControllerMixin
+    implements GetxService {
   TodolistController();
 
   StreamSubscription? _subscription;
@@ -16,8 +18,8 @@ class TodolistController extends GetxController with ControllerMixin {
 
   @override
   onInit() {
-    super.onInit();
     getAll();
+    super.onInit();
   }
 
   Future<void> add(String title, String content) async {

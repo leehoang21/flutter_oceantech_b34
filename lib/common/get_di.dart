@@ -8,6 +8,7 @@ class GetDi {
     Get.lazyPut(() => LoginController());
     Get.lazyPut(() => RegisterController());
     Get.lazyPut(() => TodolistController());
+
     return {};
   }
 }
