@@ -14,7 +14,7 @@ class LoginController extends GetxController
     if (result != null) {
       showErrorAlert('login error', () {});
     } else {
-      Get.toNamed(RouteList.todolistScreen);
+      Get.offAndToNamed(RouteList.todolistScreen);
     }
   }
 }
